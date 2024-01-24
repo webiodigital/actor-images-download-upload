@@ -96,7 +96,7 @@ export default async ({ data, iterationInput, iterationIndex, stats, originalInp
 
     // Add images to state
     try {
-        let imageIndex = 0;
+        let imageIndex = 13;
         data.forEach((item: any, itemIndex: number) => {
             if (item.skipDownload) return; // we skip item with this field
             let imagesFromPath = objectPath.get(item, pathToImageUrls);
