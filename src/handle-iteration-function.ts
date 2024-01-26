@@ -109,7 +109,7 @@ export default async ({ data, iterationInput, iterationIndex, stats, originalInp
             // **************************************************
             // **************************************************
             // **************************************************
-            if (!Array.isArray(imagesFromPath) && typeof imagesFromPath !== 'string') {
+            /*if (!Array.isArray(imagesFromPath) && typeof imagesFromPath !== 'string') {
                 stats.inc(props.itemsWithoutImages, updateStats);
                 return;
             }
@@ -119,7 +119,7 @@ export default async ({ data, iterationInput, iterationIndex, stats, originalInp
             if (imagesFromPath.length === 0) {
                 stats.inc(props.itemsWithoutImages, updateStats);
                 return;
-            }            
+            }  */          
             imagesFromPath.forEach((image: any) => {
                 stats.inc(props.imagesTotal, updateStats);
                 if (typeof image !== 'string') {
@@ -132,7 +132,6 @@ export default async ({ data, iterationInput, iterationIndex, stats, originalInp
                     state[image] = {
                         imageIndex,
                         itemIndex,
-                        obrIndex,
                     };
                     imageIndex++;
                 } else if (typeof state[image] === 'object' && state[image].fromState) {
