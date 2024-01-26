@@ -137,6 +137,11 @@ export default async ({ data, iterationInput, iterationIndex, stats, originalInp
                     stats.inc(props.imagesDuplicates, updateStats);
                 }
             });
+            // **************
+            imagesFromPath.forEach((element) => {
+                console.log(element);
+            });
+            // **************
         });
     } catch (e) {
         console.dir(e);
