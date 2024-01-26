@@ -116,7 +116,7 @@ export default async ({ data, iterationInput, iterationIndex, stats, originalInp
                 return;
             }
             if (typeof imagesFromPath === 'string') {
-                imagesFromPath = [imagesFromPath];
+            //    imagesFromPath = [imagesFromPath];
             }
             if (imagesFromPath.length === 0) {
                 stats.inc(props.itemsWithoutImages, updateStats);
