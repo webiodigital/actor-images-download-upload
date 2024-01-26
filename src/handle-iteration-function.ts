@@ -138,8 +138,8 @@ export default async ({ data, iterationInput, iterationIndex, stats, originalInp
                 }
             });
             // **************
-            imagesFromPath.forEach((element) => {
-                console.log(element);
+            imagesFromPath.forEach((image:any) => {
+                console.log(image);
             });
             // **************
         });
