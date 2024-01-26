@@ -169,7 +169,7 @@ export default async ({ data, iterationInput, iterationIndex, stats, originalInp
         if (typeof state[url].imageUploaded === 'boolean') return; // means it was already download before
         const item = data[state[url].itemIndex];
         // **************************
-        item.forEach(function (value) {console.log(value);}); 
+        item.forEach(function (item) {console.log(item);}); 
         // **************************
         const key = fileNameFunction({ url, md5, state, item, iterationIndex, input: originalInput });
         // If filename is not a string, we don't continue. This can be used to prevent the download at this point
