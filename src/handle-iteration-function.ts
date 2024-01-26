@@ -120,7 +120,7 @@ export default async ({ data, iterationInput, iterationIndex, stats, originalInp
                 stats.inc(props.itemsWithoutImages, updateStats);
                 return;
             }  */          
-            imagesFromPath.forEach((image: any) => {
+            imagesFromPath.forEach((image: any, obrIndex: number) => {
                 stats.inc(props.imagesTotal, updateStats);
                 if (typeof image !== 'string') {
                     stats.inc(props.imagesNotString, updateStats);
@@ -132,6 +132,7 @@ export default async ({ data, iterationInput, iterationIndex, stats, originalInp
                     state[image] = {
                         imageIndex,
                         itemIndex,
+                        obrIndex,
                     };
                     imageIndex++;
                 } else if (typeof state[image] === 'object' && state[image].fromState) {
