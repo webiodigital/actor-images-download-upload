@@ -104,7 +104,7 @@ export default async ({ data, iterationInput, iterationIndex, stats, originalInp
             // **************************************************
             // **************************************************
             // **************************************************
-            imagesFromPath.forEach((image:any) => {
+            imagesFromPath.forEach((image:any, obrIndex: number) => {
                 obrIndex++;
                 console.log(image, obrIndex);
             });
