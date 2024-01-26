@@ -134,6 +134,7 @@ export default async ({ data, iterationInput, iterationIndex, stats, originalInp
                     state[image] = {
                         imageIndex,
                         itemIndex,
+                        obrIndex,
                     };
                     imageIndex++;
                 } else if (typeof state[image] === 'object' && state[image].fromState) {
