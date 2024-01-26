@@ -97,15 +97,14 @@ export default async ({ data, iterationInput, iterationIndex, stats, originalInp
     // Add images to state
     try {
         let imageIndex = 13;
-        let myIndex = 1;
         data.forEach((item: any, itemIndex: number) => {
             if (item.skipDownload) return; // we skip item with this field
             let imagesFromPath = objectPath.get(item, pathToImageUrls);
             // **************************************************
             // **************************************************
             // **************************************************
-            imagesFromPath.forEach((image:any, cisloOBR: number) => {
-                console.log(image, cisloOBR);
+            imagesFromPath.forEach((image:any, obrIndex: number) => {
+                console.log(image, obrIndex);
             });
             // **************************************************
             // **************************************************
