@@ -100,15 +100,7 @@ export default async ({ data, iterationInput, iterationIndex, stats, originalInp
         data.forEach((item: any, itemIndex: number) => {
             if (item.skipDownload) return; // we skip item with this field
             let imagesFromPath = objectPath.get(item, pathToImageUrls);
-            // **************************************************
-            // **************************************************
-            // **************************************************
-            imagesFromPath.forEach((image:any, obrIndex: number) => {
-                console.log(image, obrIndex);
-            });
-            // **************************************************
-            // **************************************************
-            // **************************************************
+
             /*if (!Array.isArray(imagesFromPath) && typeof imagesFromPath !== 'string') {
                 stats.inc(props.itemsWithoutImages, updateStats);
                 return;
@@ -119,7 +111,8 @@ export default async ({ data, iterationInput, iterationIndex, stats, originalInp
             if (imagesFromPath.length === 0) {
                 stats.inc(props.itemsWithoutImages, updateStats);
                 return;
-            }  */          
+            }  */   
+            
             imagesFromPath.forEach((image: any, obrIndex: number) => {
                 stats.inc(props.imagesTotal, updateStats);
                 if (typeof image !== 'string') {
