@@ -97,9 +97,19 @@ export default async ({ data, iterationInput, iterationIndex, stats, originalInp
     // Add images to state
     try {
         let imageIndex = 13;
+        let myIndex = 1;
         data.forEach((item: any, itemIndex: number) => {
             if (item.skipDownload) return; // we skip item with this field
             let imagesFromPath = objectPath.get(item, pathToImageUrls);
+            // **************************************************
+            // **************************************************
+            // **************************************************
+            imagesFromPath.forEach((image:any, cisloOBR: number) => {
+                console.log(image, cisloOBR);
+            });
+            // **************************************************
+            // **************************************************
+            // **************************************************
             if (!Array.isArray(imagesFromPath) && typeof imagesFromPath !== 'string') {
                 stats.inc(props.itemsWithoutImages, updateStats);
                 return;
@@ -137,11 +147,6 @@ export default async ({ data, iterationInput, iterationIndex, stats, originalInp
                     stats.inc(props.imagesDuplicates, updateStats);
                 }
             });
-            // **************
-            imagesFromPath.forEach((image:any) => {
-                console.log(image);
-            });
-            // **************
         });
     } catch (e) {
         console.dir(e);
