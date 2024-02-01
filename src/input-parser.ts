@@ -7,7 +7,7 @@ import { ImageCheck } from './types.js';
 
 export const constantsFromInput = async (input: any) => {
     // Small hack to automatically load from webhook (no need for payload template)
-    const datasetId = input.datasetId || input.resource?.defaultDatasetId;
+    const datasetId = input.datasetId || input.resource.defaultDatasetId;
     const items = input.items || null;
 
     const {
@@ -105,7 +105,7 @@ export const constantsFromInput = async (input: any) => {
 
 export const checkInput = (input: any) => {
     // Small hack to automatically load from webhook (no need for payload template)
-    const datasetId = input.datasetId || input.resource?.defaultDatasetId;
+    const datasetId = input.datasetId || input.resource.defaultDatasetId;
 
     if (!input.uploadTo) throw new Error('INPUT.uploadTo has to be specified!');
 
